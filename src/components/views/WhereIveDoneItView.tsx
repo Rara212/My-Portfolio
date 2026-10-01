@@ -94,7 +94,15 @@ export const WhereIveDoneItView: React.FC = () => {
             >
               {/* Card Header with Logo + Meta */}
               <div className="p-6 pb-5 flex items-center gap-4 border-b border-[var(--border-color)]">
-                <InstitutionLogo type={item.logoType} />
+                {item.logoImage ? (
+                  <img
+                    src={item.logoImage}
+                    alt={`${item.institution} logo`}
+                    className="w-12 h-14 shrink-0 object-contain"
+                  />
+                ) : item.logoType ? (
+                  <InstitutionLogo type={item.logoType} />
+                ) : null}
 
                 <div className="space-y-0.5 min-w-0">
                   <div className="text-xs font-mono text-[var(--accent)] font-medium">

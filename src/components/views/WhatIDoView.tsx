@@ -26,21 +26,18 @@ export const WhatIDoView: React.FC<WhatIDoViewProps> = ({ profile, onNavigate, o
         </p>
 
         <p>
-          I design, build and publish high-performance systems and products of uncompromising reliability.
-          Currently researching low-latency accelerator architectures and engineering resilient distributed services.
+          I am passionate about building scalable and efficient software systems that solve real-world problems.
+          I am strong at learning new things and bridging  engineers with business side of application development.
         </p>
 
         <p>
           I&apos;m deeply interested in{' '}
-          <span className="text-[var(--text-primary)] font-medium">hardware acceleration</span>,{' '}
-          <span className="text-[var(--text-primary)] font-medium">parallel algorithm design</span>,{' '}
-          <span className="text-[var(--text-primary)] font-medium">agentic workflows</span>, and{' '}
-          <span className="text-[var(--text-primary)] font-medium">distributed cloud systems</span>.
+          <span className="text-[var(--text-primary)] font-medium">working on challenging projects that require creative problem-solving and collaboration with cross-functional teams</span>.{' '}
         </p>
       </div>
 
       {/* Interactive Feature Highlights / Selected Directions */}
-      <div className="pt-6 border-t border-[var(--border-color)] space-y-4">
+      {/* <div className="pt-6 border-t border-[var(--border-color)] space-y-4">
         <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">
           Exploration Index
         </div>
@@ -110,10 +107,10 @@ export const WhatIDoView: React.FC<WhatIDoViewProps> = ({ profile, onNavigate, o
             </div>
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Action Prompt */}
-      <div className="pt-6 border-t border-[var(--border-color)] flex items-center gap-4 text-xs font-mono">
+      {/* <div className="pt-6 border-t border-[var(--border-color)] flex items-center gap-4 text-xs font-mono">
         <button
           onClick={() => onNavigate('more-contact')}
           className="px-4 py-2 bg-[var(--accent)] text-[var(--accent-contrast)] hover:opacity-90 transition-opacity font-medium"
@@ -126,7 +123,7 @@ export const WhatIDoView: React.FC<WhatIDoViewProps> = ({ profile, onNavigate, o
         >
           View Full CV Document
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

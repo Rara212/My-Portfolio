@@ -61,8 +61,15 @@ export const Experience: React.FC = () => {
                   <h3 className="text-2xl font-serif-display text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
                     {exp.role}
                   </h3>
-                  <div className="text-sm font-medium text-[var(--text-secondary)] mt-0.5">
-                    {exp.company}
+                  <div className="mt-1 flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)]">
+                    {exp.image && (
+                      <img
+                        src={exp.image}
+                        alt={`${exp.company} logo`}
+                        className="h-8 w-8 rounded object-contain"
+                      />
+                    )}
+                    <span>{exp.company}</span>
                   </div>
                 </div>
 
