@@ -1,3 +1,6 @@
+import grouLogo from '../assets/images/grou.png';
+import gengLogo from '../assets/images/geng.png';
+
 export interface ProfileData {
   name: string;
   headline: string;
@@ -16,6 +19,7 @@ export interface ExperienceItem {
   id: string;
   role: string;
   company: string;
+  image?: string;
   location: string;
   period: string;
   type: string;
@@ -64,6 +68,7 @@ export interface MagazineProject {
   readTime: string;
   year: string;
   image: string;
+  videoUrl?: string;
   summary: string;
   caseStudy: CaseStudyData;
 }
@@ -76,7 +81,7 @@ export interface SkillCategory {
 
 export const initialProfileData: ProfileData = {
   name: "Mutya", // Easily customizable or edit in real-time in the UI
-  headline: "Aspiring Software Engineer",
+  headline: "Educator and Software Developer",
   subheadline: "Focused on building scalable and efficient software systems that solve real-world problems.",
   bio: "I am an aspiring software engineer. I am strong at learning new things and bridging  engineers with business side of application development. I am passionate about building scalable and efficient software systems that solve real-world problems. I enjoy working on challenging projects that require creative problem-solving and collaboration with cross-functional teams.",
   status: "Available for Software Engineering Roles & Research",
@@ -93,6 +98,7 @@ export const experiences: ExperienceItem[] = [
     id: "exp-1",
     role: "Product Research Intern",
     company: "Grou",
+    image: "/src/assets/images/grou.png",
     location: "Jakarta, Indonesia",
     period: "June 2025 – Aug 2026",
     type: "Internship",
@@ -145,56 +151,83 @@ export const experiences: ExperienceItem[] = [
 export const publications: PublicationItem[] = [
   {
     id: "pub-1",
-    title: "Accelerating Reed-Solomon Forward Error Correction on Reconfigurable Architectures for High-Speed Interconnects",
+    title: "Financing-Limit Prediction Classifier in Islamic Bank Using Tree-Based Algorithms",
     authors: [
-      { name: "Your Name", isPrimary: true, affiliation: "Lead Researcher & Primary Author" },
-      { name: "Elena Rostova", isPrimary: false, affiliation: "Faculty Advisor" },
-      { name: "Marcus Vance", isPrimary: false, affiliation: "Senior Research Scientist" }
+      { name: "Mutya Qurratu'ayuni Mustafa", isPrimary: true, affiliation: "Tazkia University" },
+      { name: "Muhammad Riza Iqbal Latief", isPrimary: false, affiliation: "CEP-CCIT Faculty of Engineering, Universitas Indonesia" },
+      { name: "Dewi Febriani", isPrimary: false, affiliation: "Tazkia University" }
     ],
-    journal: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+    journal: "Journal of Islamic Contemporary Accounting and Business",
     year: "2025",
-    volumeIssue: "Vol. 44, No. 3, pp. 782–794",
-    doi: "10.1109/TCAD.2025.3409121",
-    abstract: "Modern cloud-scale accelerator fabrics require ultra-reliable low-latency interconnects capable of tolerating transient bit errors at line rates exceeding 100 Gbps. This paper presents an energy-efficient 2D Reed-Solomon forward error correction (FEC) pipeline designed for reconfigurable logic. By parallelizing syndrome evaluation and Chien search onto spatial computing tiles, our architecture delivers a 4.2x throughput increase and 31% reduced logic utilization compared to conventional serial Galois Field decoders.",
-    bibtex: `@article{author2025reedsolomon,
-  title={Accelerating Reed-Solomon Forward Error Correction on Reconfigurable Architectures for High-Speed Interconnects},
-  author={Your Name and Rostova, Elena and Vance, Marcus},
-  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
-  volume={44},
-  number={3},
-  pages={782--794},
+    volumeIssue: "Vol. 3, No. 1, pp. 22–39",
+    doi: "10.30993/jicab.v3i1.520",
+    abstract: "Islamic banks are one of the financial institutions that has been proven to be the catalyst to end extreme poverty in the world. However, amid the massive development of Industry 5.0, research about technology adaptation in Islamic banks is still considered rare. The aim of this study is to develop a technology that will help Islamic banks in making their financing decision more efficient. By using the current outstanding financing data in an Islamic bank, this study proposes a machine learning algorithm that could predict a financing limit based on customer classification. The tree-based learning algorithms used to build the algorithm have shown impressive results. The results show that the basic algorithm which is the Decision Tree gives 86% prediction accuracy. The algorithm is then improved by using the Random Forest algorithm. The Random Forest algorithm gives 91% prediction accuracy which significantly improves the base learning algorithm. Future research in this area is needed as the need to implement sophisticated technology is prominent in making Islamic banking more accessible across the globe.",
+    bibtex: `@article{mustafa2025financing,
+  title={Financing-Limit Prediction Classifier in Islamic Bank Using Tree-Based Algorithms},
+  author={Mustafa, Mutya Qurratu'ayuni and Latief, Muhammad Riza Iqbal and Febriani, Dewi},
+  journal={Journal of Islamic Contemporary Accounting and Business},
+  volume={3},
+  number={1},
+  pages={22--39},
   year={2025},
-  publisher={IEEE},
-  doi={10.1109/TCAD.2025.3409121}
+  publisher={Tazkia Islamic University College},
+  doi={10.30993/jicab.v3i1.520}
 }`,
-    pdfUrl: "#",
-    arxivUrl: "https://arxiv.org"
+    pdfUrl: "https://jurnal.tazkia.ac.id/index.php/jicab/article/view/520/402",
+    arxivUrl: "https://jurnal.tazkia.ac.id/index.php/jicab/article/view/520"
   },
   {
     id: "pub-2",
-    title: "Adaptive Real-Time Dynamic Resource Rebalancing via Distributed Agentic Control",
+    title: "Influential Financial Planners and Islamic Financial Planning: A Social Media-Based Content Analysis",
     authors: [
-      { name: "Your Name", isPrimary: true, affiliation: "Primary Investigator" },
-      { name: "Kenneth Zhao", isPrimary: false, affiliation: "Co-Author" }
+      { name: "Putri Syifa Amalia", isPrimary: false, affiliation: "Tazkia Islamic University College" },
+      { name: "Rochania Ayu Yunanda", isPrimary: false, affiliation: "Binus University" },
+      { name: "Mutya Qurratu'ayuni Mustafa", isPrimary: true, affiliation: "Tazkia Islamic University College" }
     ],
-    journal: "ACM Transactions on Autonomous and Adaptive Systems (TAAS)",
+    journal: "Tazkia Islamic Finance and Business Review",
     year: "2024",
-    volumeIssue: "Vol. 19, Iss. 2, Art. 14, pp. 1–28",
-    doi: "10.1145/3641209",
-    abstract: "Dynamic urban mobility and computing resources suffer from severe spatial starvation during demand bursts. We formulate decentralized asset rebalancing as a multi-agent reinforcement learning problem with hard physical latency bounds. Experimental results over real-world telemetry traces demonstrate a 27% decrease in starved network nodes and 34% lower rebalance dispatch overhead compared to static greedy heuristics, preserving stability across volatile load conditions.",
-    bibtex: `@article{author2024adaptive,
-  title={Adaptive Real-Time Dynamic Resource Rebalancing via Distributed Agentic Control},
-  author={Your Name and Zhao, Kenneth},
-  journal={ACM Transactions on Autonomous and Adaptive Systems},
-  volume={19},
-  number={2},
-  pages={1--28},
+    volumeIssue: "Vol. 18, No. 1, pp. 55–87",
+    doi: "10.30993/tifbr.v18i1.329",
+    abstract: "Financial planning has been increasingly significant where income levels are rising, the financial industry is becoming more complicated and financial products are becoming more complex. With higher income levels and fund excesses, people demand financial assistance services to manage their financial matters. The activities of financial planners continue to grow in line with the varying demand of customers. Conventional financial planning had developed during the 1970s, while the Islamic financial industry had just emerged. From an Islamic perspective, a financial planning framework would require Shariah-compliant products and services and a deep understanding of Islamic values and principles governing economic activities. This study aims to understand to what extent Islamic financial planning has been communicated and shared by financial planners/advisors and to understand their preferences and financial priorities in providing financial advice. This qualitative paper explores the social media of chosen financial planners and Islamic financial planners. Financial planners share their thoughts and ideas on their social media. Several influential financial planners were selected through some stages. Understanding their social media content will provide a picture of their financial planning. Discussion of Islamic financial planning is scant. The paper explores and offers a novel approach of whether financial planners and so-called Islamic financial planners have different financial planning. Using the particular framework of Islamic financial planning, Islamic financial planners are expected to have different financial planning emphasizing Islamic values and principles.",
+    bibtex: `@article{amalia2024influential,
+  title={Influential Financial Planners and Islamic Financial Planning: A Social Media-Based Content Analysis},
+  author={Amalia, Putri Syifa and Yunanda, Rochania Ayu and Mustafa, Mutya Qurratu'ayuni},
+  journal={Tazkia Islamic Finance and Business Review},
+  volume={18},
+  number={1},
+  pages={55--87},
   year={2024},
-  publisher={ACM},
-  doi={10.1145/3641209}
+  publisher={Tazkia University College of Islamic Economics},
+  doi={10.30993/tifbr.v18i1.329}
 }`,
-    pdfUrl: "#",
-    arxivUrl: "https://arxiv.org"
+    pdfUrl: "https://tifbr-tazkia.org/index.php/TIFBR/article/view/329/238",
+    arxivUrl: "https://tifbr-tazkia.org/index.php/TIFBR/article/view/329"
+  },
+  {
+    id: "pub-3",
+    title: "The Effect of Social Media Content and Personal Background Performance on Financial Planning Awareness of Generation Z Muslim",
+    authors: [
+      { name: "Muhammad Raihan Gunawan", isPrimary: false, affiliation: "" },
+      { name: "Mutya Qurratu'ayuni Mustafa", isPrimary: true, affiliation: "Tazkia Islamic University College" },
+      { name: "Nisrina Zalfa Salsabil", isPrimary: false, affiliation: "" }
+    ],
+    journal: "Ekonomi Islam Indonesia",
+    year: "2020",
+    volumeIssue: "Vol. 2, No. 2",
+    doi: "10.58968/eii.v2i2.50",
+    abstract: "Social media contents on Islamic financial planning are spreading out massively. However, the study on how it impacts the awareness of Muslims society in financial planning is still rarely found. The aim of this study is to examine the impact of Islamic financial planning social media content towards the awareness of financial planning among generation Z Muslims. In addition, personal background variable is also included in the analysis. One hundred sixty-five generation Z Muslims became the participants of this research. They filled the questionnaire regarding their perspectives on social media content's impact on their knowledge of personal financial planning. This study hypothesized that social media content and personal background both affecting generation Z Muslims on their understanding about Islamic financial planning. By using multi linear regression analysis, the study revealed that the result is quite favorable. The study shows that 68% of Instagram social media content have affected the awareness of Islamic financial planning among generation Z Muslims, while the 22% came from personal background. Future research in the area is needed for a more complete understanding on how social media content affects the behavior of young Muslims in terms of financial planning for a better Islamic financial inclusion.",
+    bibtex: `@article{gunawan2020effect,
+  title={The Effect of Social Media Content and Personal Background Performance on Financial Planning Awareness of Generation Z Muslim},
+  author={Gunawan, Muhammad Raihan and Mustafa, Mutya Qurratu'ayuni and Salsabil, Nisrina Zalfa},
+  journal={Ekonomi Islam Indonesia},
+  volume={2},
+  number={2},
+  year={2020},
+  publisher={Sharia Economic Applied Research and Training (SMART) Insight},
+  doi={10.58968/eii.v2i2.50}
+}`,
+    pdfUrl: "http://journals.smartinsight.id/index.php/EII/article/download/50/48",
+    arxivUrl: "http://journals.smartinsight.id/index.php/EII/article/view/50"
   }
 ];
 
@@ -208,6 +241,7 @@ export const magazineProjects: MagazineProject[] = [
     readTime: "5 min read",
     year: "2025",
     image: "/src/assets/images/project_systems_pipeline_1790563955684.jpg",
+    videoUrl: "",
     summary: "An engineered event streaming pipeline that leverages shared-memory ring buffers, SIMD-accelerated filtering, and lock-free thread queues to eliminate garbage collection pauses and deliver ultra-predictable performance.",
     caseStudy: {
       problem: "Traditional microservice ingestion pipelines suffer from serialization bottlenecks, heap memory churn, and non-deterministic tail latencies under bursty telemetry loads, causing cascading lag in downstream anomaly detection.",
@@ -237,6 +271,7 @@ export const magazineProjects: MagazineProject[] = [
     readTime: "6 min read",
     year: "2025",
     image: "/src/assets/images/project_ai_agent_1790563971412.jpg",
+    videoUrl: "",
     summary: "A production-grade agentic workflow that breaks multi-step technical inquiries into verified hypotheses, executes concurrent web crawls, and cross-references peer-reviewed papers with exact line citations.",
     caseStudy: {
       problem: "Large language models frequently hallucinate technical citations or summarize conflicting papers without explicit claim attribution, making automated technical research unreliable for academic or engineering rigor.",
@@ -266,6 +301,7 @@ export const magazineProjects: MagazineProject[] = [
     readTime: "4 min read",
     year: "2024",
     image: "/src/assets/images/project_cloud_infra_1790563984675.jpg",
+    videoUrl: "",
     summary: "A lightweight Kubernetes Custom Resource Definition (CRD) and controller written in Go that routes ephemeral jobs to the most energy-efficient and network-proximate compute nodes.",
     caseStudy: {
       problem: "Edge deployments often run heterogenous hardware across scattered regions. Default Kubernetes scheduling ignores network egress cost variability and real-time regional grid carbon intensity, resulting in higher latency and energy waste.",
@@ -295,6 +331,7 @@ export const magazineProjects: MagazineProject[] = [
     readTime: "4 min read",
     year: "2024",
     image: "/src/assets/images/project_vision_graphics_1790564001671.jpg",
+    videoUrl: "",
     summary: "An interactive 3D spatial simulation running directly in the browser using WebGPU compute shaders to simulate dynamic cloth, fluid ripples, and topological deformation with realistic physical damping.",
     caseStudy: {
       problem: "Rendering complex interactive 3D deformations on mobile and low-power devices typically degrades frame rates below 30 FPS, leading to stuttering interactions and heavy CPU-to-GPU transfer bottlenecks.",
@@ -319,13 +356,14 @@ export const magazineProjects: MagazineProject[] = [
 
 export interface ResearchWorkCard {
   id: string;
+  logoImage?: string;
   year: string;
   institution: string;
   institutionUrl: string;
   roleType: string;
   roleDetail: string;
   whatIDid: string;
-  logoType: 'uoft' | 'mcgill' | 'alphawave';
+  logoType?: 'uoft' | 'mcgill' | 'alphawave';
 }
 
 export interface SelectedProjectItem {
@@ -341,66 +379,66 @@ export interface SelectedProjectItem {
 
 export const researchWorkList: ResearchWorkCard[] = [
   {
-    id: 'grou',
+    id: 'exp-1',
+    logoImage: grouLogo,
     year: '2025-2026',
     institution: 'Grou',
     institutionUrl: 'https://grou.co.id',
-    roleType: 'Product Research Intern',
+    roleType: 'Internship',
     roleDetail: 'Product Team - Research Intern',
-    whatIDid: 'Researched and implemented synthesizable 2D Reed-Solomon error correction codes for FPGA using SystemVerilog.',
-    logoType: 'uoft'
+    whatIDid: 'Researched and Synthesized AI market research and industry trends in human resource (HR field) into strategic briefs to drive product innovation',
   },
   {
-    id: 'mcgill',
-    year: '2024',
-    institution: 'McGill University',
-    institutionUrl: 'https://mcgill.ca',
-    roleType: 'Research Intern',
-    roleDetail: 'Research Intern - Prof. Christophe Dubach',
-    whatIDid: 'Implemented a benchmarking framework for Host-FPGA data transfer APIs (OpenCL, XRT). Then set up a scalable testing environment on AWS F1 FPGA.',
-    logoType: 'mcgill'
+    id: 'geng',
+    logoImage: gengLogo,
+    year: '2025-2026',
+    institution: 'Generation Girl',
+    institutionUrl: 'https://generationgirl.org',
+    roleType: 'Volunteer',
+    roleDetail: 'Artificial Intelligence Trainer',
+    whatIDid: 'Designed and delivered nationwide capacity-building workshops focused on AI educational application and academic research.'
   },
-  {
-    id: 'alphawave',
-    year: '2023',
-    institution: 'Alphawave Semi',
-    institutionUrl: 'https://awavesemi.com',
-    roleType: 'Summer Intern',
-    roleDetail: 'Summer Intern',
-    whatIDid: 'Built a PCIe configuration tool with Vite, React, TailwindCSS & created a proprietary logic language for error detection.',
-    logoType: 'alphawave'
-  }
+  // {
+  //   id: 'qasch',
+  //   year: '2023 - 2026',
+  //   institution: 'Qurratuayun School',
+  //   institutionUrl: 'https://www.facebook.com/qurratuayunschool/',
+  //   roleType: 'Volunteer',
+  //   roleDetail: 'Vice Principal & Head of Curriculum',
+  //   whatIDid: 'Built a PCIe configuration tool with Vite, React, TailwindCSS & created a proprietary logic language for error detection.',
+  //   logoType: 'alphawave'
+  // }
 ];
 
 export const selectedProjectsList: SelectedProjectItem[] = [
   {
-    id: 'bixiflow',
-    name: 'BixiFlow',
+    id: 'minerva',
+    name: 'Minerva',
+    language: 'Vue & TypeScript',
+    //languageDotColor: '#3572A5',
+    description: '1st Place Korea-ASEAN Digital Academy Batch 4 Capstone Project - AI-Powered EdTech web application, providing interactive eLearning platform for scholarship hunters'
+  },
+  {
+    id: 'clippr',
+    name: 'Clippr',
+    language: 'Javascript',
+    //languageDotColor: '#f1e05a',
+    description: 'AI-powered video clipping tool based on educational material completeness. Built with OpenAI Whisper, OpenAI GPT.'
+  },
+  {
+    id: 'finpred',
+    name: 'FinPred',
     language: 'Python',
-    languageDotColor: '#3572A5',
-    description: '1st Place Databricks Hackathon - Agentic system for real-time bike redistribution using RAG'
+    //languageDotColor: '#f1e05a',
+    description: 'Machine learning model to predict financing limit category for financing applicants'
   },
-  {
-    id: 'hermes-ai',
-    name: 'Hermes AI Browser',
-    language: 'TypeScript',
-    languageDotColor: '#3178c6',
-    description: 'AI agent-powered browser for automating any browser task. Built with Electron, Next.js, Gemini.'
-  },
-  {
-    id: 'virtudrip',
-    name: 'VirtuDrip',
-    language: 'JavaScript',
-    languageDotColor: '#f1e05a',
-    description: '2nd Place HawkHacks - Virtual fitting room projecting 3D clothes onto users in real-time'
-  },
-  {
-    id: 'hey-darling',
-    name: 'Hey Darling :3',
-    language: 'React',
-    languageDotColor: '#61dafb',
-    description: 'Interactive 3D cat assistant helping elderly manage calendar, notes, and weather through conversation'
-  }
+  // {
+  //   id: 'hey-darling',
+  //   name: 'Hey Darling :3',
+  //   language: 'React',
+  //   languageDotColor: '#61dafb',
+  //   description: 'Interactive 3D cat assistant helping elderly manage calendar, notes, and weather through conversation'
+  // }
 ];
 
 
@@ -419,22 +457,10 @@ export interface TechSkill {
 
 export const techSkills: TechSkill[] = [
   {
-    id: "systemverilog",
-    name: "SystemVerilog",
-    type: "Hardware, FPGA",
-    useCase: "Designing synthesizable RTL for FPGAs, including error correction codes and high-speed data pipelines.",
-    categoryGroup: "Hardware & Low-Level",
-    theme: {
-      iconBg: "bg-[#272545]",
-      iconBorder: "border-[#3b3866]",
-      iconColor: "text-indigo-300"
-    }
-  },
-  {
     id: "python",
     name: "Python",
     type: "Backend, AI/ML",
-    useCase: "Building AI agents, data pipelines, and backend services with Flask and modern ML frameworks.",
+    useCase: "Building AI agents, data pipelines, and backend services with Flask, Streamlit and modern ML frameworks.",
     categoryGroup: "AI & Backend",
     theme: {
       iconBg: "bg-[#18273b]",
@@ -467,10 +493,10 @@ export const techSkills: TechSkill[] = [
     }
   },
   {
-    id: "cpp",
-    name: "C++",
+    id: "cs",
+    name: "C#",
     type: "Systems, Performance",
-    useCase: "Competitive programming, low-level memory control, and performance-critical tools.",
+    useCase: "Learning programming algorithms",
     categoryGroup: "Systems & Performance",
     theme: {
       iconBg: "bg-[#122e3b]",
@@ -478,30 +504,30 @@ export const techSkills: TechSkill[] = [
       iconColor: "text-teal-300"
     }
   },
-  {
-    id: "go",
-    name: "Go",
-    type: "Distributed Systems, Cloud",
-    useCase: "High-concurrency microservices, custom Kubernetes controllers, and telemetry aggregators.",
-    categoryGroup: "Distributed Systems",
-    theme: {
-      iconBg: "bg-[#112a36]",
-      iconBorder: "border-[#1a4356]",
-      iconColor: "text-cyan-300"
-    }
-  },
-  {
-    id: "linux-ebpf",
-    name: "Linux & eBPF",
-    type: "Kernel, Observability",
-    useCase: "In-kernel packet filtering, zero-copy socket steering, and real-time process tracing.",
-    categoryGroup: "Kernel & Infrastructure",
-    theme: {
-      iconBg: "bg-[#2b211a]",
-      iconBorder: "border-[#4a392d]",
-      iconColor: "text-amber-300"
-    }
-  }
+  // {
+  //   id: "go",
+  //   name: "Go",
+  //   type: "Distributed Systems, Cloud",
+  //   useCase: "High-concurrency microservices, custom Kubernetes controllers, and telemetry aggregators.",
+  //   categoryGroup: "Distributed Systems",
+  //   theme: {
+  //     iconBg: "bg-[#112a36]",
+  //     iconBorder: "border-[#1a4356]",
+  //     iconColor: "text-cyan-300"
+  //   }
+  // },
+  // {
+  //   id: "linux-ebpf",
+  //   name: "Linux & eBPF",
+  //   type: "Kernel, Observability",
+  //   useCase: "In-kernel packet filtering, zero-copy socket steering, and real-time process tracing.",
+  //   categoryGroup: "Kernel & Infrastructure",
+  //   theme: {
+  //     iconBg: "bg-[#2b211a]",
+  //     iconBorder: "border-[#4a392d]",
+  //     iconColor: "text-amber-300"
+  //   }
+  // }
 ];
 
 export const skillCategories: SkillCategory[] = [
