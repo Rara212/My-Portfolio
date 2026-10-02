@@ -484,7 +484,7 @@ export const techSkills: TechSkill[] = [
     id: "typescript",
     name: "TypeScript",
     type: "Full-stack",
-    useCase: "Type-safe development across frontend and backend, including Electron apps.",
+    useCase: "Type-safe development across frontend and backend.",
     categoryGroup: "Full-Stack",
     theme: {
       iconBg: "bg-[#15274d]",
