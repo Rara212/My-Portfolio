@@ -80,8 +80,8 @@ export interface SkillCategory {
 }
 
 export const initialProfileData: ProfileData = {
-  name: "Mutya", // Easily customizable or edit in real-time in the UI
-  headline: "Educator and Software Developer",
+  name: "Mutya Mustafa", // Easily customizable or edit in real-time in the UI
+  headline: "Aspiring Software Developer",
   subheadline: "Focused on building scalable and efficient software systems that solve real-world problems.",
   bio: "I am an aspiring software engineer. I am strong at learning new things and bridging  engineers with business side of application development. I am passionate about building scalable and efficient software systems that solve real-world problems. I enjoy working on challenging projects that require creative problem-solving and collaboration with cross-functional teams.",
   status: "Available for Software Engineering Roles & Research",

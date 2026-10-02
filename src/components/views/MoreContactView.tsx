@@ -59,7 +59,7 @@ export const MoreContactView: React.FC<MoreContactViewProps> = ({ profile, onOpe
           More + Contact
         </h2>
         <p className="text-sm text-[var(--text-secondary)] mt-2 font-sans-body">
-          Direct communication channels, curriculum vitae documents, and inquiry transmissions.
+          I&apos;m open to discussing software engineering opportunities, research collaborations, and other professional inquiries.
         </p>
       </div>
 
@@ -96,7 +96,7 @@ export const MoreContactView: React.FC<MoreContactViewProps> = ({ profile, onOpe
           </div>
 
           {/* Curriculum Vitae Download / View */}
-          <div className="p-5 bg-[var(--bg-surface)] border border-[var(--border-color)] space-y-3">
+          {/* <div className="p-5 bg-[var(--bg-surface)] border border-[var(--border-color)] space-y-3">
             <div className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-wider">
               Curriculum Vitae
             </div>
@@ -113,7 +113,7 @@ export const MoreContactView: React.FC<MoreContactViewProps> = ({ profile, onOpe
               </span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
-          </div>
+          </div> */}
 
           {/* Social Profiles */}
           <div className="p-5 bg-[var(--bg-surface)] border border-[var(--border-color)] space-y-3">
@@ -144,7 +144,7 @@ export const MoreContactView: React.FC<MoreContactViewProps> = ({ profile, onOpe
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="lg:col-span-7 bg-[var(--bg-surface)] border border-[var(--border-color)] p-6 sm:p-7">
+        {/* <div className="lg:col-span-7 bg-[var(--bg-surface)] border border-[var(--border-color)] p-6 sm:p-7">
           {status === 'success' ? (
             <div className="py-10 text-center space-y-3">
               <div className="w-10 h-10 bg-[var(--accent)] text-[var(--accent-contrast)] mx-auto flex items-center justify-center">
@@ -253,7 +253,7 @@ export const MoreContactView: React.FC<MoreContactViewProps> = ({ profile, onOpe
               </button>
             </form>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

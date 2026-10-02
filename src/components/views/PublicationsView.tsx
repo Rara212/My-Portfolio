@@ -30,7 +30,7 @@ export const PublicationsView: React.FC = () => {
           Publications
         </h2>
         <p className="text-sm text-[var(--text-secondary)] mt-2 font-sans-body">
-          Peer-reviewed journal articles, hardware accelerators, and dynamic control theory.
+          Peer-reviewed journal articles.
         </p>
       </div>
 

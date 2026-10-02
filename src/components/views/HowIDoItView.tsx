@@ -76,7 +76,7 @@ export const HowIDoItView: React.FC = () => {
           How I Do It
         </h2>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed font-sans-body">
-          I leverage modern technologies across hardware and software to build high-performance systems.
+          I explore modern technologies to build high-performance systems.
         </p>
       </div>
 
