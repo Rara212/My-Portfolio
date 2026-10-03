@@ -1,6 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
-import { researchWorkList, selectedProjectsList, ResearchWorkCard, SelectedProjectItem } from '../../data/portfolioData';
+import { researchWorkList } from '../../data/portfolioData';
 
 // Institutional Logos crafted to mirror the exact emblems in screenshot
 const InstitutionLogo: React.FC<{ type: 'uoft' | 'mcgill' | 'alphawave' }> = ({ type }) => {
@@ -148,64 +148,6 @@ export const WhereIveDoneItView: React.FC = () => {
         </div>
       </div>
 
-      {/* ========================================================================= */}
-      {/* SECTION 2: Selected Projects (Screenshot 2) */}
-      {/* ========================================================================= */}
-      <div className="space-y-6">
-        <div>
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
-            Selected Projects
-          </h2>
-        </div>
-
-        {/* Stacked Horizontal Project Cards (Screenshot 2) */}
-        <div className="space-y-3">
-          {selectedProjectsList.map((project) => (
-            <div
-              key={project.id}
-              className="bg-[var(--bg-surface)] border border-[var(--border-color)] hover:border-[var(--border-strong)] rounded-xl overflow-hidden transition-all duration-200"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-12 divide-y sm:divide-y-0 sm:divide-x divide-[var(--border-color)]">
-                {/* Column 1: name */}
-                <div className="sm:col-span-3 p-4 sm:p-5 flex flex-col justify-center">
-                  <div className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
-                    name
-                  </div>
-                  <div className="text-sm font-semibold text-[var(--text-primary)] mt-1 tracking-tight">
-                    {project.name}
-                  </div>
-                </div>
-
-                {/* Column 2: language */}
-                <div className="sm:col-span-2 p-4 sm:p-5 flex flex-col justify-center">
-                  <div className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
-                    language
-                  </div>
-                  <div className="text-sm font-medium text-[var(--text-primary)] mt-1 flex items-center gap-1.5">
-                    <span>{project.language}</span>
-                    {project.languageDotColor && (
-                      <span
-                        className="w-2 h-2 rounded-full inline-block shrink-0"
-                        style={{ backgroundColor: project.languageDotColor }}
-                      />
-                    )}
-                  </div>
-                </div>
-
-                {/* Column 3: description */}
-                <div className="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center">
-                  <div className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
-                    description
-                  </div>
-                  <div className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-1 font-sans-body">
-                    {project.description}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

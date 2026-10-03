@@ -1,6 +1,6 @@
 import React from 'react';
-import { Cpu } from 'lucide-react';
-import { techSkills, TechSkill } from '../../data/portfolioData';
+import { Cpu, ExternalLink } from 'lucide-react';
+import { techSkills, selectedProjectsList } from '../../data/portfolioData';
 
 // Custom Brand SVGs tailored for the exact qasim.li icon aesthetic
 const TechIcon: React.FC<{ skillId: string }> = ({ skillId }) => {
@@ -128,6 +128,71 @@ export const HowIDoItView: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* SECTION 2: Selected Projects */}
+      <div className="space-y-6 pt-2">
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
+            Selected Projects
+          </h2>
+        </div>
+
+        <div className="space-y-3">
+          {selectedProjectsList.map((project) => (
+            <div
+              key={project.id}
+              className="bg-[var(--bg-surface)] border border-[var(--border-color)] hover:border-[var(--border-strong)] rounded-xl overflow-hidden transition-all duration-200"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-12 divide-y sm:divide-y-0 sm:divide-x divide-[var(--border-color)]">
+                <div className="sm:col-span-3 p-4 sm:p-5 flex flex-col justify-center">
+                  <div className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
+                    name
+                  </div>
+                  {project.githubUrl ? (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-semibold text-[var(--text-primary)] mt-1 tracking-tight hover:underline inline-flex items-center gap-1.5"
+                    >
+                      <span>{project.name}</span>
+                      <ExternalLink className="w-3.5 h-3.5 shrink-0 text-[var(--text-muted)]" />
+                    </a>
+                  ) : (
+                    <div className="text-sm font-semibold text-[var(--text-primary)] mt-1 tracking-tight">
+                      {project.name}
+                    </div>
+                  )}
+                </div>
+
+                <div className="sm:col-span-2 p-4 sm:p-5 flex flex-col justify-center">
+                  <div className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
+                    language
+                  </div>
+                  <div className="text-sm font-medium text-[var(--text-primary)] mt-1 flex items-center gap-1.5">
+                    <span>{project.language}</span>
+                    {project.languageDotColor && (
+                      <span
+                        className="w-2 h-2 rounded-full inline-block shrink-0"
+                        style={{ backgroundColor: project.languageDotColor }}
+                      />
+                    )}
+                  </div>
+                </div>
+
+                <div className="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center">
+                  <div className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
+                    description
+                  </div>
+                  <div className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-1 font-sans-body">
+                    {project.description}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

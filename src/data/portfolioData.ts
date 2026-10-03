@@ -416,21 +416,24 @@ export const selectedProjectsList: SelectedProjectItem[] = [
     name: 'Minerva',
     language: 'Vue & TypeScript',
     //languageDotColor: '#3572A5',
-    description: '1st Place Korea-ASEAN Digital Academy Batch 4 Capstone Project - AI-Powered EdTech web application, providing interactive eLearning platform for scholarship hunters'
+    description: '1st Place Korea-ASEAN Digital Academy Batch 4 Capstone Project - AI-Powered EdTech web application, providing interactive eLearning platform for scholarship hunters',
+    githubUrl: 'https://github.com/YangHansen/project-minerva-fe'
   },
   {
     id: 'clippr',
     name: 'Clippr',
     language: 'Javascript',
     //languageDotColor: '#f1e05a',
-    description: 'AI-powered video clipping tool based on educational material completeness. Built with OpenAI Whisper, OpenAI GPT.'
+    description: 'AI-powered video clipping tool based on educational material completeness. Built with OpenAI Whisper, OpenAI GPT.',
+    githubUrl: 'https://github.com/kada-sprint/Clippr'
   },
   {
     id: 'finpred',
     name: 'FinPred',
     language: 'Python',
     //languageDotColor: '#f1e05a',
-    description: 'Machine learning model to predict financing limit category for financing applicants'
+    description: 'Machine learning model to predict financing limit category for financing applicants',
+    githubUrl: 'https://github.com/Rara212/FinPred'
   },
   // {
   //   id: 'hey-darling',
