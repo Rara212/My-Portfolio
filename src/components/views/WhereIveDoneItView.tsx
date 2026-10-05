@@ -81,7 +81,7 @@ export const WhereIveDoneItView: React.FC = () => {
       <div className="space-y-6">
         <div>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
-            Research &amp; Work
+            Experiences
           </h2>
         </div>
 

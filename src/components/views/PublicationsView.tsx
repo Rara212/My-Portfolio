@@ -30,7 +30,7 @@ export const PublicationsView: React.FC = () => {
           Publications
         </h2>
         <p className="text-sm text-[var(--text-secondary)] mt-2 font-sans-body">
-          Peer-reviewed journal articles, hardware accelerators, and dynamic control theory.
+          Peer-reviewed journal articles.
         </p>
       </div>
 
@@ -72,7 +72,7 @@ export const PublicationsView: React.FC = () => {
                           className="font-bold text-[var(--text-primary)] underline decoration-[var(--accent)] decoration-2 underline-offset-4 mr-1.5"
                           title={`${author.name} (Lead / Primary Author)`}
                         >
-                          {author.name}*
+                          {author.name}
                         </span>
                       ) : (
                         <span className="text-[var(--text-secondary)] mr-1.5">
@@ -85,9 +85,9 @@ export const PublicationsView: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <div className="text-xs font-mono text-[var(--text-muted)] italic pt-0.5">
+                {/* <div className="text-xs font-mono text-[var(--text-muted)] italic pt-0.5">
                   * Highlights primary / lead investigator
-                </div>
+                </div> */}
               </div>
 
               {/* Abstract Drawer */}

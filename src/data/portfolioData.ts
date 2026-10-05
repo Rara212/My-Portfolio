@@ -1,5 +1,6 @@
 import grouLogo from '../assets/images/grou.png';
 import gengLogo from '../assets/images/geng.png';
+import kadaLogo from '../assets/images/kada.png';
 
 export interface ProfileData {
   name: string;
@@ -80,8 +81,8 @@ export interface SkillCategory {
 }
 
 export const initialProfileData: ProfileData = {
-  name: "Mutya", // Easily customizable or edit in real-time in the UI
-  headline: "Educator and Software Developer",
+  name: "Mutya Mustafa", // Easily customizable or edit in real-time in the UI
+  headline: "Aspiring Software Developer",
   subheadline: "Focused on building scalable and efficient software systems that solve real-world problems.",
   bio: "I am an aspiring software engineer. I am strong at learning new things and bridging  engineers with business side of application development. I am passionate about building scalable and efficient software systems that solve real-world problems. I enjoy working on challenging projects that require creative problem-solving and collaboration with cross-functional teams.",
   status: "Available for Software Engineering Roles & Research",
@@ -398,16 +399,16 @@ export const researchWorkList: ResearchWorkCard[] = [
     roleDetail: 'Artificial Intelligence Trainer',
     whatIDid: 'Designed and delivered nationwide capacity-building workshops focused on AI educational application and academic research.'
   },
-  // {
-  //   id: 'qasch',
-  //   year: '2023 - 2026',
-  //   institution: 'Qurratuayun School',
-  //   institutionUrl: 'https://www.facebook.com/qurratuayunschool/',
-  //   roleType: 'Volunteer',
-  //   roleDetail: 'Vice Principal & Head of Curriculum',
-  //   whatIDid: 'Built a PCIe configuration tool with Vite, React, TailwindCSS & created a proprietary logic language for error detection.',
-  //   logoType: 'alphawave'
-  // }
+  {
+    id: 'kada',
+    logoImage: kadaLogo,
+    year: 'July - August 2026',
+    institution: 'Korea-ASEAN Digital Academy #4',
+    institutionUrl: 'https://aseanrokfund.org/news-announcement/korea-asean-digital-academy-batch-four/',
+    roleType: 'Training Program',
+    roleDetail: 'Software Development Trainee',
+    whatIDid: 'Built an AI-powered EdTech web application, providing interactive eLearning platform for scholarship hunters',
+  }
 ];
 
 export const selectedProjectsList: SelectedProjectItem[] = [

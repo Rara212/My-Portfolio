@@ -12,17 +12,7 @@ import { ThemeSelectorModal, ThemeId, THEME_OPTIONS } from './components/ThemeSe
 import { initialProfileData, ProfileData, MagazineProject } from './data/portfolioData';
 
 export default function App() {
-  const [profile, setProfile] = useState<ProfileData>(() => {
-    try {
-      const saved = localStorage.getItem('portfolio_profile');
-      if (saved) {
-        return JSON.parse(saved);
-      }
-    } catch {
-      // fallback
-    }
-    return initialProfileData;
-  });
+  const [profile, setProfile] = useState<ProfileData>(initialProfileData);
 
   const [activeTab, setActiveTab] = useState<NavTabId>(() => {
     const hash = window.location.hash.replace('#', '') as NavTabId;
@@ -96,14 +86,6 @@ export default function App() {
       // ignore
     }
   }, [currentTheme]);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('portfolio_profile', JSON.stringify(profile));
-    } catch {
-      // ignore
-    }
-  }, [profile]);
 
   const handleSelectTheme = (themeId: ThemeId) => {
     setCurrentTheme(themeId);
