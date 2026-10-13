@@ -497,6 +497,30 @@ export const techSkills: TechSkill[] = [
     }
   },
   {
+    id: "postman",
+    name: "Postman",
+    type: "API Testing",
+    useCase: "API testing for validating endpoints, payloads, and integration flows.",
+    categoryGroup: "API & Quality",
+    theme: {
+      iconBg: "bg-[#1d2a38]",
+      iconBorder: "border-[#2c3e52]",
+      iconColor: "text-orange-300"
+    }
+  },
+  {
+    id: "playwright",
+    name: "Playwright",
+    type: "End-to-End Testing",
+    useCase: "Testing and validating browser behavior across user flows.",
+    categoryGroup: "Testing & QA",
+    theme: {
+      iconBg: "bg-[#132a2e]",
+      iconBorder: "border-[#1b3d46]",
+      iconColor: "text-green-300"
+    }
+  },
+  {
     id: "cs",
     name: "C#",
     type: "Systems, Performance",

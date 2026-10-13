@@ -35,6 +35,22 @@ const TechIcon: React.FC<{ skillId: string }> = ({ skillId }) => {
           <circle cx="12" cy="12" r="1.8" fill="currentColor" />
         </svg>
       );
+    case 'postman':
+      return (
+        <img
+          src="/src/assets/images/postman.png"
+          alt="Postman logo"
+          className="w-9 h-9 object-contain rounded-sm"
+        />
+      );
+    case 'playwright':
+      return (
+        <img
+          src="/src/assets/images/playwright.png"
+          alt="Playwright logo"
+          className="w-9 h-9 object-contain rounded-sm"
+        />
+      );
     case 'typescript':
       return (
         <div className="w-9 h-9 bg-blue-500 rounded text-white font-mono font-bold flex items-center justify-center text-sm tracking-tighter shadow-sm">
