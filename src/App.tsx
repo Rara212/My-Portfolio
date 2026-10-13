@@ -11,6 +11,7 @@ import { CaseStudyModal } from './components/CaseStudyModal';
 import { ResumeModal } from './components/ResumeModal';
 import { ThemeSelectorModal, ThemeId, THEME_OPTIONS } from './components/ThemeSelectorModal';
 import { initialProfileData, ProfileData, MagazineProject } from './data/portfolioData';
+import { playCrispClick } from './utils/clickSound';
 
 export default function App() {
   const [profile, setProfile] = useState<ProfileData>(initialProfileData);
@@ -67,6 +68,7 @@ export default function App() {
         'what-i-do',
         'where-ive-done-it',
         'how-i-do-it',
+        'achievements',
         'showcase',
         'publications',
         'more-contact',
@@ -77,6 +79,13 @@ export default function App() {
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Play a crisp click sound on every click
+  useEffect(() => {
+    const handleClick = () => playCrispClick();
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
   }, []);
 
   // Sync theme with DOM root element
