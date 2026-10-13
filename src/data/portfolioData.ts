@@ -445,6 +445,70 @@ export const selectedProjectsList: SelectedProjectItem[] = [
   // }
 ];
 
+export interface CredentialItem {
+  id: string;
+  title: string;
+  organization: string;
+  location: string;
+  year: string;
+  note?: string;
+}
+
+export const certifications: CredentialItem[] = [
+  {
+    id: 'cert-cawp',
+    title: 'Certified Associate Wealth Planner in Islamic Financial Planning',
+    organization: 'Financial Planning Standards Board Indonesia',
+    location: 'Bogor, Indonesia',
+    year: '2023',
+  },
+  {
+    id: 'cert-bnsp',
+    title: 'Certified Programmer',
+    organization: 'The National Professional Certification Agency (BNSP)',
+    location: 'Depok, Indonesia',
+    year: '2023',
+  },
+  {
+    id: 'cert-lcci',
+    title: 'Level 2 Certificate in Bookkeeping and Accounts',
+    organization: 'London Chamber of Commerce and Industry (LCCI)',
+    location: 'Johor Bahru, Malaysia',
+    year: '2017',
+    note: 'Pass with distinction.',
+  },
+];
+
+export const achievements: CredentialItem[] = [
+  {
+    id: 'ach-sharia-hackathon',
+    title: '1st Winner — Sharia Economic Hackathon',
+    organization: 'Sharia Economic Hackathon 2022 by KSEI AkSES LIPIA',
+    location: 'Jakarta, Indonesia',
+    year: '2022',
+  },
+  {
+    id: 'ach-piosima',
+    title: '3rd Winner — English Debating Competition',
+    organization: 'PIOSIMA II KOPERTAIS II West Java Region',
+    location: 'Cipasung, Indonesia',
+    year: '2022',
+  },
+  {
+    id: 'ach-temilnas',
+    title: 'Best Paper — National Scientific Writing Competition',
+    organization: 'National Scientific Conference (TEMILNAS) XX by FOSSEI',
+    location: 'Semarang, Indonesia',
+    year: '2021',
+  },
+  {
+    id: 'ach-moderator',
+    title: 'Moderator of International Conference',
+    organization: '8th ASEAN Universities International Conference on Islamic Finance',
+    location: 'Bogor, Indonesia',
+    year: '2020',
+  },
+];
 
 export interface TechSkill {
   id: string;

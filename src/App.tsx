@@ -3,6 +3,7 @@ import { Sidebar, NavTabId } from './components/Sidebar';
 import { WhatIDoView } from './components/views/WhatIDoView';
 import { WhereIveDoneItView } from './components/views/WhereIveDoneItView';
 import { HowIDoItView } from './components/views/HowIDoItView';
+import { AchievementsView } from './components/views/AchievementsView';
 import { MagazineShowcaseView } from './components/views/MagazineShowcaseView';
 import { PublicationsView } from './components/views/PublicationsView';
 import { MoreContactView } from './components/views/MoreContactView';
@@ -20,6 +21,7 @@ export default function App() {
       'what-i-do',
       'where-ive-done-it',
       'how-i-do-it',
+      'achievements',
       'showcase',
       'publications',
       'more-contact',
@@ -130,6 +132,8 @@ export default function App() {
           {activeTab === 'where-ive-done-it' && <WhereIveDoneItView />}
 
           {activeTab === 'how-i-do-it' && <HowIDoItView />}
+
+          {activeTab === 'achievements' && <AchievementsView />}
 
           {activeTab === 'showcase' && (
             <MagazineShowcaseView onSelectProject={(p) => setSelectedProject(p)} />

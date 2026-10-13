@@ -6,6 +6,7 @@ export type NavTabId =
   | 'what-i-do'
   | 'where-ive-done-it'
   | 'how-i-do-it'
+  | 'achievements'
   | 'showcase'
   | 'publications'
   | 'more-contact';
@@ -27,6 +28,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'what-i-do', label: 'what I do' },
     { id: 'where-ive-done-it', label: "where I've done it" },
     { id: 'how-i-do-it', label: 'how I do it' },
+    { id: 'achievements', label: 'achievements' },
     { id: 'publications', label: 'publications' },
     { id: 'more-contact', label: 'more + contact' },
   ];
